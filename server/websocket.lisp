@@ -246,7 +246,7 @@ expect from the name."
 Continue the process with *WEBSOCKET-SOCKET* bound to the original TCP socket
 and *HUNCHENTOOT-VERSION* enhanced by the Hunchensocket version."
   (let ((*websocket-socket* socket)
-        (hunchentoot-asd:*hunchentoot-version* (format nil "~a Hunchensocket 0" hunchentoot-asd:*hunchentoot-version*)))
+        (hunchentoot:*hunchentoot-version* (format nil "~a Hunchensocket 0" hunchentoot:*hunchentoot-version*)))
     (call-next-method)))
 
 (defmethod process-connection ((*acceptor* websocket-acceptor) (socket t))
